@@ -111,7 +111,20 @@ section {
 }
 
 .home-content {
-    max-width: 60rem;
+    max-width: 50%;
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 240rem; 
+    height: auto;
 }
 
 .home-content h1 {
@@ -123,20 +136,29 @@ section {
 .home-content .text-animate {
     position: relative;
     width: 32.8rem;
-
 }
 
 .home-content .text-animate h3 {
     font-size: 3.2rem;
     font-weight: 700;
-    color:transparent;
+    color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
 }
 
 .home-content p {
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
+}
 
+@media (max-width: 768px) {
+    
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-image {
+        display: none;
+    }
 }
 
 .btn-box {
