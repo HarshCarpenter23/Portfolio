@@ -662,6 +662,7 @@ span {
 
     .project-card {
         padding: 15px; /* Adjust padding for smaller cards */
+        max-width: 90%;
     }
 
     .project-card h3 {
@@ -673,7 +674,8 @@ span {
     }
 
     .btn, .project-card a {
-        font-size: 1.3rem;
-        padding: 8px 12px;
+        font-size: 1.3rem !important;
+        width: 13rem !important;
+        padding: 8px 12px !important;
     }
 }
