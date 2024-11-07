@@ -159,6 +159,10 @@ section {
     .home-image {
         display: none;
     }
+
+    .main-btns {
+        display: none !important;
+    }
 }
 
 .btn-box {
