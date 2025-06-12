@@ -1,5 +1,4 @@
 // DOM Elements
-const loader = document.getElementById('loader');
 const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
@@ -9,10 +8,113 @@ const skillsGroups = document.querySelectorAll('.skills-group');
 const contactForm = document.getElementById('contactForm');
 
 // Loading Screen
-window.addEventListener('load', () => {
+// Professional loading states
+const loadingStates = [
+    'Initializing...',
+    'Loading assets...',
+    'Preparing interface...',
+    'Optimizing experience...',
+    'Almost ready...',
+    'Welcome'
+];
+
+// Create subtle floating elements
+function createFloatingElements() {
+    const container = document.getElementById('floatingElements');
+    const elementCount = 12;
+    
+    for (let i = 0; i < elementCount; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'floating-dot';
+        
+        // Distributed positioning
+        dot.style.left = Math.random() * 100 + '%';
+        dot.style.top = Math.random() * 100 + '%';
+        
+        // Staggered animation delays
+        dot.style.animationDelay = Math.random() * 8 + 's';
+        
+        container.appendChild(dot);
+    }
+}
+
+// Professional progress animation
+function animateProgress() {
+    const progressBar = document.getElementById('progress');
+    const percentageText = document.getElementById('percentage');
+    const stateText = document.getElementById('loadingState');
+    let progress = 0;
+    let stateIndex = 0;
+    
+    const interval = setInterval(() => {
+        // Smooth, realistic progress increment
+        const increment = Math.random() * 2 + 0.5;
+        progress = Math.min(progress + increment, 100);
+        
+        // Update UI
+        progressBar.style.width = progress + '%';
+        percentageText.textContent = Math.floor(progress) + '%';
+        
+        // Update loading state
+        const expectedStateIndex = Math.floor((progress / 100) * (loadingStates.length - 1));
+        if (expectedStateIndex > stateIndex && expectedStateIndex < loadingStates.length) {
+            stateIndex = expectedStateIndex;
+            stateText.textContent = loadingStates[stateIndex];
+            stateText.style.animation = 'none';
+            stateText.offsetHeight; // Trigger reflow
+            stateText.style.animation = 'statesFade 0.8s ease-in-out forwards';
+        }
+        
+        // Complete loading
+        if (progress >= 100) {
+            clearInterval(interval);
+            stateText.textContent = loadingStates[loadingStates.length - 1];
+            
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1500);
+        }
+    }, 80);
+}
+
+// Demo restart function
+function showLoader() {
+    const loader = document.getElementById('loader');
+    loader.classList.remove('hidden');
+    
+    // Reset progress
+    document.getElementById('progress').style.width = '0%';
+    document.getElementById('percentage').textContent = '0%';
+    document.getElementById('loadingState').textContent = loadingStates[0];
+    
+    // Restart animation
     setTimeout(() => {
-        loader.classList.add('hidden');
-    }, 2000);
+        animateProgress();
+    }, 300);
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    createFloatingElements();
+    
+    // Start loading after brief delay
+    setTimeout(() => {
+        animateProgress();
+    }, 500);
+});
+
+// Subtle mouse interaction
+let mouseX = 0, mouseY = 0;
+document.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    
+    // Very subtle parallax on geometric elements
+    const accents = document.querySelectorAll('.geometric-accent');
+    accents.forEach((accent, index) => {
+        const speed = (index + 1) * 0.3;
+        accent.style.transform += ` translate(${mouseX * speed}px, ${mouseY * speed}px)`;
+    });
 });
 
 // Navbar Scroll Effect

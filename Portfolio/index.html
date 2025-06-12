@@ -7,14 +7,35 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loader" id="loader">
+        <!-- Subtle Floating Elements -->
+        <div class="floating-elements" id="floatingElements"></div>
+        
+        <!-- Geometric Accents -->
+        <div class="geometric-accent"></div>
+        <div class="geometric-accent"></div>
+        <div class="geometric-accent"></div>
+        
+        <!-- Main Content -->
         <div class="loader-content">
             <div class="loader-text">HARSH</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+            <div class="tagline">Portfolio</div>
+            
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span class="progress-label">Loading</span>
+                    <span class="progress-percentage" id="percentage">0%</span>
+                </div>
+                <div class="loader-bar">
+                    <div class="loader-progress" id="progress"></div>
+                </div>
+                <div class="loading-states">
+                    <span id="loadingState">Initializing...</span>
+                </div>
             </div>
         </div>
     </div>
@@ -325,32 +346,7 @@
 
                 <div class="project-card">
                     <div class="project-image">                        
-                        <img src="images/medicare.png" alt="Medicare" class="project-img">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://medi-firebase.vercel.app/" target="_blank" class="project-link">
-                                    <i class='bx bx-link-external'></i>
-                                </a>
-                                <a href="https://github.com/Arin2408/MediFirebase.git" target="_blank" class="project-link">
-                                    <i class='bx bxl-github'></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">Healthcare AI</div>
-                        <h3>Medicare - AI Doctor Appointment</h3>
-                        <p>AI-powered healthcare platform reducing waiting times with intelligent slot assignment and blockchain-based supply chain management.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">AI</span>
-                            <span class="tech-tag">Blockchain</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
+                        <img src="images/mauthn.png" alt="MauthN" class="project-img">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://indominuslabs.in" target="_blank" class="project-link">
@@ -396,6 +392,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
+                        <img src="images/docquery.png" alt="DocQuery" class="project-img">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://indominuslabs.in" target="_blank" class="project-link">
@@ -435,6 +432,32 @@
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">                        
+                        <img src="images/medicare.png" alt="Medicare" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://medi-firebase.vercel.app/" target="_blank" class="project-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                                <a href="https://github.com/Arin2408/MediFirebase.git" target="_blank" class="project-link">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Healthcare AI</div>
+                        <h3>Medicare - AI Doctor Appointment</h3>
+                        <p>AI-powered healthcare platform reducing waiting times with intelligent slot assignment and blockchain-based supply chain management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Blockchain</span>
                         </div>
                     </div>
                 </div>
