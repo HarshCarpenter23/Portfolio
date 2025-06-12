@@ -3,336 +3,707 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsh Carpenter | Portfolio</title>
+    <title>Harsh Carpenter | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
-
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">HARSH</a>
-    
-        <div class="bx bx-menu" id="menu-icon" onclick="toggleMenu()"></div>
-    
-        <nav class="navbar" id="navbar">
-            <a href="#home" class="active" onclick="closeMenu()">Home</a>
-            <a href="#about" onclick="closeMenu()">About</a>
-            <a href="#education" onclick="closeMenu()">Education</a>
-            <a href="#projects" onclick="closeMenu()">Projects</a>
-            <a href="#skills" onclick="closeMenu()">Skills</a>
-            <a href="#contact" onclick="closeMenu()">Contact</a>
-        </nav>
-    </header>
-    
-
-    <!-- Home -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm <span>Harsh Carpenter</span></h1>
-            <div class="text-animate">
-                <h3>Full Stack Developer</h3>
-            </div>
-            <p>Winner AIC ALEAP WEHUB NATIONAL LEVEL HACKATHON | VIP Cisco 2023 | Full Stack Development | Cybersecurity | Java</p>
-    
-            <div class="btn-box main-btns">
-                <a href="https://www.linkedin.com/in/harsh-carpenter/" class="btn">Hire me</a>
-                <a href="https://www.linkedin.com/in/harsh-carpenter/" class="btn">Let's Talk</a>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-text">HARSH</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
             </div>
         </div>
-    
-        <!-- Image Container -->
-        <div class="home-image">
-            <img src="images/home-bg.png" alt="Background Image">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">HARSH</span>
+                <span class="logo-dot">.</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    
-        <div class="home-sci">
-            <a href="https://www.linkedin.com/in/harsh-carpenter/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-            <a href="https://www.reddit.com/u/Aware-Instruction114/s/jpFtox2LZD" target="_blank"><i class='bx bxl-reddit' ></i></a>
-            <a href="https://github.com/HarshCarpenter23" target="_blank"><i class='bx bxl-github' ></i></a>
-        </div>
-    </section>
-    
-    
+    </nav>
 
-    <section class="about" id="about">
-        <h2 class="heading">About <span>Me</span></h2>
-
-        <div class="about-img">
-            <img src="images/about.png" alt="">
-            <span class="circle-spin"></span>
-        </div>
-
-        <div class="about-content">
-            <h3>Full Stack Developer & Cybersecurity</h3>
-            <p>Full stack developer with good knowledge of DSA and OOPs. Mainly, I use ReactJs, NextJs, Django, Flask, PHP, MySQL. Cybersecurity professional.
-                Skilled problem solver with a passion for creating innovative solutions. Open to new opportunities and collaborations.</p>
-        </div>
-
-        <div class="btn-box btns">
-            <a href="https://www.linkedin.com/in/harsh-carpenter/" class="btn">Know More</a>
-        </div>
-    </section>
-
-    <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span></h2>
-
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Education</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2020</div>
-                            <h3>10th CBSE - St.Thomas Senior Secondary School</h3>
-                            <p>I have completed my 10th standard in year 2020 with 82%.</p>
-                        </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
                     </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2022</div>
-                            <h3>12th CBSE -  St.Thomas Senior Secondary School</h3>
-                            <p>I have completed my 12th standard in year 2022 with 85%.</p>
-                        </div>
+                    <h1 class="hero-name">
+                        <span class="name-part">Harsh</span>
+                        <span class="name-part">Carpenter</span>
+                    </h1>
+                    <div class="hero-title">
+                        <span class="title-text">Full Stack Developer</span>
+                        <span class="title-cursor">|</span>
                     </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> 2022-2026</div>
-                            <h3>B.Tech Computer Science and Engineering</h3>
-                            <p>I am currently pursuing my Btech form Vellore Institute of Technology-AP. I will be graduated in year 2026.</p>
-                        </div>
+                    <p class="hero-description">
+                        Passionate developer crafting innovative digital solutions with expertise in modern web technologies, cybersecurity, and AI integration.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Get In Touch</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span>View Work</span>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class="education-column">
-                <h3 class="title">Experience</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> Sep 2023 - Current</div>
-                            <h3>Full Stack Developer, Indominus Labs</h3>
-                            <p>
-                                <ul style="padding-left: 20px; margin: 0; font-size: 1.6rem;">
-                                    <li style="margin-bottom: 10px;">
-                                        Presently leading a team in a real-time product project. Using NextJS, PHP, MySQL and Django.
-                                    </li>
-                                    <li style="margin-bottom: 10px;"> 
-                                        Project aims to provide a site and organization management system for construction companies.
-                                    </li>
-                                    <li style="margin-bottom: 10px;"> 
-                                        Providing a complete solution with AI chatbots and 3D modelling features.
-                                    </li>
-                                </ul>                               
-                                 </p>
-                        </div>
+            
+            <!-- Enhanced Right Side Visual -->
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="profile-image">
+                        <img src="images/about.png" alt="Harsh Carpenter" class="profile-photo">
                     </div>
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> Jan 2024 - Jun 2024</div>
-                            <h3>Full Stack Developer Intern, Digital Fortress Pvt Ltd</h3>
-                            <p>
-                                <ul style="padding-left: 20px; margin: 0; font-size: 1.6rem;">
-                                    <li style="margin-bottom: 10px;">
-                                        Utilized <strong>ReactJS</strong> to create dynamic and responsive user interfaces, significantly improving usability and user engagement.
-                                    </li>
-                                    <li style="margin-bottom: 10px;">
-                                        Designed and implemented the company's website, ensuring a professional online presence and streamlined user experience.
-                                    </li>
-                                    <li style="margin-bottom: 10px;">
-                                        Acquired skills in <strong>cloud computing</strong> and web hosting technologies, expanding expertise in modern web infrastructure.
-                                    </li>
-                                    <li style="margin-bottom: 10px;">
-                                        Successfully led a team to victory in a startup hackathon, earning a prize of Rs. 1 lakh for innovative solutions and effective problem-solving.
-                                    </li>
-                                </ul>                               
-                                 </p>
-                        </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i> July 2023 - August 2023</div>
-                            <h3>Cisco - Cybersecurity</h3>
-                            <p>I was shorlisted for cisco virtual internship program 2023. My area of internship was cybersecurity. This was a good experience for me. I got exposure in Cybersecurity field. During this internship I learned many things about cybersecurity domain. </p>
-                        </div>
-                    </div>
-
                     
-
+                    <!-- Animated Rings -->
+                    <div class="animated-rings">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="ring ring-3"></div>
+                    </div>
                     
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="heading">My <span>Work & Projects</span></h2>
-        <div class="project-section">
-            <div class="project-card">
-                <h3>Site Analytics (M3 Book)</h3>
-                <p>Developed a comprehensive web application for managing civil engineering data using NextJS, MySQL, and PHP. Integrated AI for historical data analysis and actionable insights.</p>
-                <p>Collaborated with stakeholders to refine functionalities tailored for the industry.</p>
-                <div class="btn-box project-btns">
-                    <a class="btn project-btn" href="https://m-analytics-rust.vercel.app/">Know More</a>
-                    <a class="btn project-btn" href="https://devsites.flickanalytics.in/" target="_blank">Demo Product</a>
-                </div>
-            </div>
-    
-            <div class="project-card">
-                <h3>Digital Fortress Official Website</h3>
-                <p>Developed a portfolio website for Digital Fortress using NextJs. Ensured fast load times.</p>
-                <p>Designed and implemented a professional interface to effectively communicate the company's expertise and offerings in the cybersecurity sector.</p>
-                <div class="btn-box project-btns">
-                    <a class="btn project-btn" href="https://digitalfortress.in" target="_blank">Visit</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Medicare - Doctor Appointment Using AI</h3>
-                <p>Team-led project aimed at reducing waiting time and overcrowding at hospitals. </p>
-                <p>Built a chat model to assign slots based on user input.</p>
-                <p>Inventory and Supply Chain Management using Blockchain.</p>
-                <p>Developed it using the web framework Vite + ReactJS.</p>
-                <div class="btn-box project-btns">
-                    <a class="btn project-btn" href="https://medi-firebase.vercel.app/" target="_blank">Visit</a>
-                    <a class="btn project-btn" href="https://github.com/Arin2408/MediFirebase.git" target="_blank">GitHub</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>MauthN</h3>
-                <p>Completely Passswordless Authenticator</p>
-                <p>MAuthN is a passwordless authentication system that secures devices and applications using multi-factor biometrics, cryptographic techniques, and device attestation, ensuring protection against cyber threats while offering a seamless user experience across all platforms.
-                </p>
-                <div class="btn-box project-btns">
-                    <a class="btn project-btn" href="https://indominuslabs.in" target="_blank">Visit</a>
-                </div>
-            </div> 
-
-            <div class="project-card">
-                <h3>DocQuery</h3>
-                <p>Pdf to Question Generation</p>
-                <p>DocQuery is an intelligent document management system designed to enhance the efficiency of organizing, searching, and retrieving documents. Built using modern web technologies, the platform allows users to upload, categorize, and access files through an intuitive search interface.
-                </p>
-                <div class="btn-box project-btns">
-                    <a class="btn project-btn" href="https://indominuslabs.in" target="_blank">Visit</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Indominus Labs Official Website</h3>
-                <p>Led development of the portfolio website for Indominus Labs from scratch ensuring responsiveness and cross-browser compatibility.</p>
-                <p>Indominus Labs is a Chennai based startup company.</p>
-                <p>This website showcase the companies real world analytics projects.</p>
-                <p>Used ReactJs and CSS.</p>
-                <p></p>
-                <div class="btn-box project-btns">
-                    <a class="btn project-btn" href="https://indominuslabs.in" target="_blank">Visit</a>
+                    <!-- Floating Tech Icons -->
+                    <div class="floating-tech-icons">
+                        <div class="tech-icon" data-tech="React">
+                            <i class='bx bxl-react'></i>
+                        </div>
+                        <div class="tech-icon" data-tech="JavaScript">
+                            <i class='bx bxl-javascript'></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Python">
+                            <i class='bx bxl-python'></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Node.js">
+                            <i class='bx bxl-nodejs'></i>
+                        </div>
+                        <div class="tech-icon" data-tech="CSS3">
+                            <i class='bx bxl-css3'></i>
+                        </div>
+                        <div class="tech-icon" data-tech="HTML5">
+                            <i class='bx bxl-html5'></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Git">
+                            <i class='bx bxl-git'></i>
+                        </div>
+                        <div class="tech-icon" data-tech="Database">
+                            <i class='bx bx-data'></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Geometric Shapes -->
+                    <div class="geometric-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                        <div class="shape shape-4"></div>
+                    </div>
                 </div>
             </div>
         </div>
         
+        <!-- Social Links -->
+        <div class="hero-social">
+            <a href="https://www.linkedin.com/in/harsh-carpenter/" target="_blank" class="social-link">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/HarshCarpenter23" target="_blank" class="social-link">
+                <i class='bx bxl-github'></i>
+            </a>
+            <a href="https://www.reddit.com/u/Any_Waltz8086" target="_blank" class="social-link">
+                <i class='bx bxl-reddit'></i>
+            </a>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow">
+                <i class='bx bx-down-arrow-alt'></i>
+            </div>
+        </div>
     </section>
 
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Coding skills</h3>
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>NextJs <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <h3>Building digital experiences that matter</h3>
+                        <p>I'm a passionate full-stack developer with expertise in modern web technologies and cybersecurity. My journey in tech has been driven by curiosity and a desire to create innovative solutions that make a real impact.</p>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class='bx bx-trophy'></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Award Winner</h4>
+                                <p>National Level Hackathon Winner at AIC ALEAP WEHUB</p>
+                            </div>
                         </div>
-
-                        <div class="progress">
-                            <h3>ReactJs <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class='bx bx-code-alt'></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Full Stack Expertise</h4>
+                                <p>Proficient in React, Next.js, Django, Flask, and modern web technologies</p>
+                            </div>
                         </div>
-
-                        <div class="progress">
-                            <h3>Python <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class='bx bx-shield'></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Cybersecurity</h4>
+                                <p>VIP Cisco 2023 certified with strong security fundamentals</p>
+                            </div>
                         </div>
-
-                        <div class="progress">
-                            <h3>Flask & Django <span>80%</span></h3>
-                            <div class="bar"><span></span></div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Experience</div>
                         </div>
-
-                        <div class="progress">
-                            <h3>MUI | Tailwind CSS <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Projects Completed</div>
                         </div>
-
-                        <div class="progress">
-                            <h3>Cybersecurity <span>70%</span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="stat-card">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Technologies</div>
                         </div>
-
-                        <div class="progress">
-                            <h3>Android Development <span>60%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                        
-                        <div class="progress">
-                            <h3>Java DSA <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="stat-card">
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">Hackathon Won</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Experience & Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jun 2024 - Present</div>
+                        <h3>Full Stack Developer</h3>
+                        <h4>Indominus Labs</h4>
+                        <p>Leading a team in developing real-time product projects using NextJS, PHP, MySQL, and Django. Creating comprehensive solutions for construction companies with AI chatbots and 3D modeling features.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">NextJS</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Team Lead</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jan 2024 - Jun 2024</div>
+                        <h3>Full Stack Developer Intern</h3>
+                        <h4>Digital Fortress Pvt Ltd</h4>
+                        <p>Developed dynamic user interfaces with ReactJS, designed company website, and led team to victory in startup hackathon winning Rs. 1 lakh prize.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">ReactJS</span>
+                            <span class="tag">Cloud Computing</span>
+                            <span class="tag">Hackathon Winner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jul 2023 - Aug 2023</div>
+                        <h3>Cybersecurity Intern</h3>
+                        <h4>Cisco VIP Program 2023</h4>
+                        <p>Selected for prestigious Cisco virtual internship program focusing on cybersecurity domain and threat analysis.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Cisco</span>
+                            <span class="tag">VIP Program</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2026</div>
+                        <h3>B.Tech Computer Science</h3>
+                        <h4>Vellore Institute of Technology-AP</h4>
+                        <p>Currently pursuing Bachelor's degree in Computer Science and Engineering with focus on software development and emerging technologies.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Computer Science</span>
+                            <span class="tag">VIT-AP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">                        
+                        <img src="images/m3.png" alt="m3" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://m-analytics-rust.vercel.app/" target="_blank" class="project-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                                <a href="https://devsites.flickanalytics.in/" target="_blank" class="project-link">
+                                    <i class='bx bx-show'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web Application</div>
+                        <h3>Site Analytics (M3 Book)</h3>
+                        <p>Comprehensive web application for managing civil engineering data with AI integration for historical data analysis and actionable insights.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">NextJS</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">                        
+                        <img src="images/medicare.png" alt="Medicare" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://medi-firebase.vercel.app/" target="_blank" class="project-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                                <a href="https://github.com/Arin2408/MediFirebase.git" target="_blank" class="project-link">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Healthcare AI</div>
+                        <h3>Medicare - AI Doctor Appointment</h3>
+                        <p>AI-powered healthcare platform reducing waiting times with intelligent slot assignment and blockchain-based supply chain management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Blockchain</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://indominuslabs.in" target="_blank" class="project-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Authentication</div>
+                        <h3>MauthN</h3>
+                        <p>Completely passwordless authentication system using multi-factor biometrics and cryptographic techniques for enhanced security.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Biometrics</span>
+                            <span class="tech-tag">Cryptography</span>
+                            <span class="tech-tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/df.png" alt="DF" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://digitalfortress.in" target="_blank" class="project-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Corporate Website</div>
+                        <h3>Digital Fortress Website</h3>
+                        <p>Professional portfolio website for cybersecurity company with optimized performance and modern design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">NextJS</span>
+                            <span class="tech-tag">Performance</span>
+                            <span class="tech-tag">SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://indominuslabs.in" target="_blank" class="project-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Document AI</div>
+                        <h3>DocQuery</h3>
+                        <p>Intelligent document management system with PDF to question generation capabilities for enhanced document interaction.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Document Processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/indominus.png" alt="Indominus" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://indominuslabs.in" target="_blank" class="project-link">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Startup Website</div>
+                        <h3>Indominus Labs</h3>
+                        <p>Complete portfolio website for Chennai-based startup showcasing real-world analytics projects with responsive design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+            </div>
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category active" data-category="frontend">
+                        <i class='bx bx-code-alt'></i>
+                        <span>Frontend</span>
+                    </div>
+                    <div class="skill-category" data-category="backend">
+                        <i class='bx bx-server'></i>
+                        <span>Backend</span>
+                    </div>
+                    <div class="skill-category" data-category="tools">
+                        <i class='bx bx-wrench'></i>
+                        <span>Tools & Others</span>
+                    </div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skills-group active" data-group="frontend">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-react'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>React / Next.js</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-javascript'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>JavaScript / TypeScript</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-tailwind-css'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Tailwind CSS / MUI</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-group" data-group="backend">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-python'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-django'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Django / Flask</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80"></div>
+                                    </div>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bx-data'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>MySQL / Database</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="75"></div>
+                                    </div>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-group" data-group="tools">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bx-shield'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Cybersecurity</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="70"></div>
+                                    </div>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-java'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Java DSA</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class='bx bxl-android'></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Android Development</h4>
+                                <div class="skill-level">
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="60"></div>
+                                    </div>
+                                    <span class="skill-percentage">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-
-        <form action="#">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
-                    <span class="focus"></span>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-text">
+                        <h3>Ready to start your next project?</h3>
+                        <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>harshcarpenter06902@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class='bx bx-phone'></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91 9179970908</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class='bx bx-map'></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>India</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="input-field">
-                    <input type="text" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
-                </div>
-
-                <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
-                    <span class="focus"></span>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
                 </div>
             </div>
-
-            <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your message" required></textarea>
-                <span class="focus"></span>
-            </div>
-
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-
-        </form>
+        </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Harsh Carpenter. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/harsh-carpenter/" target="_blank" class="social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/HarshCarpenter23" target="_blank" class="social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://www.reddit.com/u/Any_Waltz8086" target="_blank" class="social-link">
+                        <i class='bx bxl-reddit'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
-    <script>
-        function toggleMenu() {
-            document.getElementById("navbar").classList.toggle("active");
-        }
-
-        function closeMenu() {
-            document.getElementById("navbar").classList.remove("active");
-        }
-
-    </script>
 </body>
 </html>
