@@ -48,7 +48,7 @@ function animateProgress() {
     
     const interval = setInterval(() => {
         // Smooth, realistic progress increment
-        const increment = Math.random() * 2 + 0.5;
+        const increment = Math.random() * 4 + 0.5;
         progress = Math.min(progress + increment, 100);
         
         // Update UI
