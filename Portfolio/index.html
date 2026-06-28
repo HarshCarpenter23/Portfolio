@@ -12,31 +12,12 @@
 <body>
     <!-- Loading Screen -->
     <div class="loader" id="loader">
-        <!-- Subtle Floating Elements -->
-        <div class="floating-elements" id="floatingElements"></div>
-        
-        <!-- Geometric Accents -->
-        <div class="geometric-accent"></div>
-        <div class="geometric-accent"></div>
-        <div class="geometric-accent"></div>
-        
-        <!-- Main Content -->
-        <div class="loader-content">
-            <div class="loader-text">HARSH</div>
-            <div class="tagline">Portfolio</div>
-            
-            <div class="progress-section">
-                <div class="progress-info">
-                    <span class="progress-label">Loading</span>
-                    <span class="progress-percentage" id="percentage">0%</span>
-                </div>
-                <div class="loader-bar">
-                    <div class="loader-progress" id="progress"></div>
-                </div>
-                <div class="loading-states">
-                    <span id="loadingState">Initializing...</span>
-                </div>
+        <div class="loader-stage">
+            <div class="loader-badge" id="loaderBadge">
+                <div class="loader-count"><span id="percentage">0</span><small>%</small></div>
             </div>
+            <div class="loader-name">Harsh Carpenter</div>
+            <div class="loader-status" id="loadingState">Initializing</div>
         </div>
     </div>
 

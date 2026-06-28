@@ -18,89 +18,61 @@ const loadingStates = [
     'Welcome'
 ];
 
-// Create subtle floating elements
-function createFloatingElements() {
-    const container = document.getElementById('floatingElements');
-    const elementCount = 12;
-    
-    for (let i = 0; i < elementCount; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'floating-dot';
-        
-        // Distributed positioning
-        dot.style.left = Math.random() * 100 + '%';
-        dot.style.top = Math.random() * 100 + '%';
-        
-        // Staggered animation delays
-        dot.style.animationDelay = Math.random() * 8 + 's';
-        
-        container.appendChild(dot);
-    }
-}
-
-// Professional progress animation
+// Premium progress animation — eased ring fill + slide-up reveal
 function animateProgress() {
-    const progressBar = document.getElementById('progress');
+    const badge = document.getElementById('loaderBadge');
     const percentageText = document.getElementById('percentage');
     const stateText = document.getElementById('loadingState');
-    let progress = 0;
-    let stateIndex = 0;
-    
-    const interval = setInterval(() => {
-        // Smooth, realistic progress increment
-        const increment = Math.random() * 4 + 0.5;
-        progress = Math.min(progress + increment, 100);
-        
-        // Update UI
-        progressBar.style.width = progress + '%';
-        percentageText.textContent = Math.floor(progress) + '%';
-        
-        // Update loading state
-        const expectedStateIndex = Math.floor((progress / 100) * (loadingStates.length - 1));
-        if (expectedStateIndex > stateIndex && expectedStateIndex < loadingStates.length) {
-            stateIndex = expectedStateIndex;
-            stateText.textContent = loadingStates[stateIndex];
-            stateText.style.animation = 'none';
-            stateText.offsetHeight; // Trigger reflow
-            stateText.style.animation = 'statesFade 0.8s ease-in-out forwards';
-        }
-        
-        // Complete loading
-        if (progress >= 100) {
-            clearInterval(interval);
-            stateText.textContent = loadingStates[loadingStates.length - 1];
-            
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 1500);
-        }
-    }, 80);
-}
-
-// Demo restart function
-function showLoader() {
     const loader = document.getElementById('loader');
-    loader.classList.remove('hidden');
-    
-    // Reset progress
-    document.getElementById('progress').style.width = '0%';
-    document.getElementById('percentage').textContent = '0%';
-    document.getElementById('loadingState').textContent = loadingStates[0];
-    
-    // Restart animation
-    setTimeout(() => {
-        animateProgress();
-    }, 300);
+
+    const states = [
+        { at: 0, label: 'Initializing' },
+        { at: 24, label: 'Loading assets' },
+        { at: 52, label: 'Preparing interface' },
+        { at: 80, label: 'Optimizing experience' },
+        { at: 100, label: 'Welcome' }
+    ];
+
+    const duration = 2200;
+    const start = performance.now();
+    let lastLabel = '';
+
+    function setState(label) {
+        if (!stateText || label === lastLabel) return;
+        lastLabel = label;
+        stateText.textContent = label;
+        stateText.style.animation = 'none';
+        void stateText.offsetWidth; // reflow to restart animation
+        stateText.style.animation = 'statusFade 0.5s ease';
+    }
+
+    function frame(now) {
+        const t = Math.min((now - start) / duration, 1);
+        // easeInOutCubic for a deliberate, premium feel
+        const eased = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        const value = eased * 100;
+
+        if (badge) badge.style.setProperty('--progress', value.toFixed(1));
+        if (percentageText) percentageText.textContent = Math.round(value);
+
+        const current = states.filter(s => value >= s.at).pop();
+        if (current) setState(current.label);
+
+        if (t < 1) {
+            requestAnimationFrame(frame);
+        } else {
+            if (badge) badge.style.setProperty('--progress', '100');
+            if (percentageText) percentageText.textContent = '100';
+            setState('Welcome');
+            setTimeout(() => loader && loader.classList.add('hidden'), 520);
+        }
+    }
+    requestAnimationFrame(frame);
 }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    createFloatingElements();
-    
-    // Start loading after brief delay
-    setTimeout(() => {
-        animateProgress();
-    }, 500);
+    setTimeout(animateProgress, 350);
 });
 
 // Subtle mouse interaction
