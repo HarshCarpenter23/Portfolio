@@ -173,14 +173,14 @@
     const linePos = new Float32Array(links.length * 2 * 3);
     lineGeo.setAttribute('position', new THREE.BufferAttribute(linePos, 3));
     glWorld.add(new THREE.LineSegments(lineGeo, new THREE.LineBasicMaterial({
-        color: 0x5b66c4, transparent: true, opacity: 0.22
+        color: 0x6b78d6, transparent: true, opacity: 0.3
     })));
 
     const pulseGeo = new THREE.BufferGeometry();
     const pulsePos = new Float32Array(links.length * 3);
     pulseGeo.setAttribute('position', new THREE.BufferAttribute(pulsePos, 3));
     glWorld.add(new THREE.Points(pulseGeo, new THREE.PointsMaterial({
-        size: 10, map: makeGlow(), color: 0x22d3ee, transparent: true, opacity: 0.95,
+        size: 13, map: makeGlow(), color: 0x22d3ee, transparent: true, opacity: 1.0,
         blending: THREE.AdditiveBlending, depthWrite: false, depthTest: false
     })));
 
