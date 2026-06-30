@@ -79,6 +79,9 @@
             
             <!-- Enhanced Right Side Visual -->
             <div class="hero-visual">
+                <!-- Three.js "Living System" scene (progressive enhancement) -->
+                <div class="hero-scene" id="heroScene" aria-hidden="true"></div>
+                <!-- Fallback hero visual (shown if WebGL/JS unavailable) -->
                 <div class="hero-image-container">
                     <div class="profile-image">
                         <img src="images/about.png" alt="Harsh Carpenter" class="profile-photo">
@@ -769,5 +772,10 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Three.js (classic build — works over file:// and http, no build step) -->
+    <script src="https://unpkg.com/three@0.137.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.137.0/examples/js/renderers/CSS3DRenderer.js"></script>
+    <script src="hero3d.js"></script>
 </body>
 </html>
