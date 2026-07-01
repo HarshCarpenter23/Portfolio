@@ -209,6 +209,61 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => observer.observe(el));
 });
 
+// ---- Minimal, self-cleaning scroll reveals for content sections ----
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const srObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            el.classList.add('sr-in');
+            srObserver.unobserve(el);
+            // remove reveal classes once the transition is done so they
+            // never override hover transforms / leave stale styles
+            const cleanup = () => {
+                el.classList.remove('sr', 'sr-in');
+                el.style.transitionDelay = '';
+                el.style.willChange = '';
+                el.removeEventListener('transitionend', cleanup);
+            };
+            el.addEventListener('transitionend', cleanup);
+            setTimeout(cleanup, 1300);
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+    const singles = [
+        '.section-header',
+        '.about-intro',
+        '.contact .contact-info > .contact-text',
+        '.contact-form'
+    ];
+    const groups = [
+        '.about-details .detail-item',
+        '.stats-grid .stat-card',
+        '.timeline .timeline-item',
+        '.projects-grid .project-card',
+        '.skills-categories .skill-category',
+        '.skills-group .skill-item',
+        '.contact-details .contact-item'
+    ];
+
+    const tag = (el) => { el.classList.add('sr'); srObserver.observe(el); };
+
+    singles.forEach(sel => document.querySelectorAll(sel).forEach(tag));
+    groups.forEach(sel => {
+        let prevParent = null, i = 0;
+        document.querySelectorAll(sel).forEach(el => {
+            if (el.parentElement !== prevParent) { prevParent = el.parentElement; i = 0; }
+            el.style.transitionDelay = Math.min(i, 6) * 0.06 + 's';
+            i++;
+            tag(el);
+        });
+    });
+
+    document.body.classList.add('sr-on');
+});
+
 // Contact Form Handling
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
